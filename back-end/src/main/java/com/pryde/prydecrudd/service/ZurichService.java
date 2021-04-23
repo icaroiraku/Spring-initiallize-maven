@@ -94,7 +94,7 @@ public class ZurichService implements ZurichServiceImplements {
      **/
     @Override
     public Optional<Zurich> buscar(Long codigo) {
-        return zurichRepository.findById(codigo);
+        return this.zurichRepository.findById(codigo);
     }
 
     /**
@@ -105,6 +105,6 @@ public class ZurichService implements ZurichServiceImplements {
 
     @Override
     public List<Zurich> getAllZurich() {
-        return zurichRepository.findAll();
+        return this.zurichRepository.findAll();
     }
 }
