@@ -3,6 +3,7 @@ package com.pryde.prydecrudd.controller;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +26,8 @@ public class ZurichController {
 			@ApiResponse(code = 500, message = "Foi gerada uma exceção"),
 	})
 	@PostMapping(value = "/salvarZurichCadastro")
-	public @ResponseBody Zurich salvarZurich(@RequestBody Zurich zurich) {
+	public @ResponseBody
+	ResponseEntity<Zurich> salvarZurich(@RequestBody Zurich zurich) {
 		return zurichService.salvarZurich(zurich);
 		
 	}
