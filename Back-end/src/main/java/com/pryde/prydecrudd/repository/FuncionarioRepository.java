@@ -8,6 +8,4 @@ import com.pryde.prydecrudd.entity.Funcionario;
 @Repository
  public interface FuncionarioRepository  extends JpaRepository<Funcionario,Long> {
 
-	
-	
 }
