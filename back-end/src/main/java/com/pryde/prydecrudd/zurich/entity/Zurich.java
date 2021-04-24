@@ -36,7 +36,6 @@ public class Zurich implements Serializable {
     @Column(name = "tb_salario")
     private String salario;
 
-
     @Column(name = "tb_plano")
     private String plano;
 
