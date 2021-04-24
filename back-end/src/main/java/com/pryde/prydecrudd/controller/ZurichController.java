@@ -1,18 +1,14 @@
 package com.pryde.prydecrudd.controller;
 
+import com.pryde.prydecrudd.entity.Zurich;
+import com.pryde.prydecrudd.serviceimpl.ZurichServiceImplements;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import com.pryde.prydecrudd.entity.Zurich;
-
-
-import com.pryde.prydecrudd.serviceimpl.ZurichServiceImplements;
 
 import java.util.List;
 import java.util.Optional;
@@ -32,7 +28,7 @@ public class ZurichController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @PostMapping(value = "/salvarZurichCadastro")
+    @PostMapping(path = "/salvarZurichCadastro")
     public @ResponseBody
     ResponseEntity<Zurich> salvarZurich(@RequestBody Zurich zurich) {
         return this.zurichService.salvarZurich(zurich);
@@ -46,7 +42,7 @@ public class ZurichController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @PutMapping(value = "/atualizarZurich")
+    @PutMapping(path = "/atualizarZurich")
     public @ResponseBody
     ResponseEntity<Zurich> atualizaZurich(@RequestBody Zurich zurich) {
         return this.zurichService.atulizarZurich(zurich);
@@ -59,7 +55,7 @@ public class ZurichController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @DeleteMapping(value = "/deletarZurich/{id}")
+    @DeleteMapping(path = "/deletarZurich/{id}")
     public @ResponseBody
     ResponseEntity<Void> deletarZurichId(@RequestParam Long id) {
         return this.zurichService.deletarPorIdZurch(id);
@@ -72,7 +68,7 @@ public class ZurichController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @DeleteMapping(value = "/deletarCadastroZurich")
+    @DeleteMapping(path = "/deletarCadastroZurich")
     public @ResponseBody
     ResponseEntity<Zurich> deletarCadastroZurich(@RequestBody Zurich zurich) {
         return this.zurichService.deletarZurch(zurich);
@@ -85,7 +81,7 @@ public class ZurichController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @GetMapping(value = "/buscarCadastroZurich")
+    @GetMapping(path = "/buscarCadastroZurich")
     public List<Zurich> buscarZurich() {
         return this.zurichService.getAllZurich();
     }
@@ -97,7 +93,7 @@ public class ZurichController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @GetMapping(value = "/buscarZurichPorId/{id}")
+    @GetMapping(path = "/buscarZurichPorId/{id}")
     public Optional<Zurich> buscarZurichId(Long id) {
         return this.zurichService.buscar(id);
     }

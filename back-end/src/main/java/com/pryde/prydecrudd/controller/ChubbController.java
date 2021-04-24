@@ -26,7 +26,7 @@ public class ChubbController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @PostMapping(value = "/salvarChubbCadastro")
+    @PostMapping(path = "/salvarChubbCadastro")
     public @ResponseBody
     ResponseEntity<Chubb> salvarChubb(@RequestBody Chubb chubb) {
         return this.chubbService.salvarChubb(chubb);
@@ -40,7 +40,7 @@ public class ChubbController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @PutMapping(value = "/atualizarChubb")
+    @PutMapping(path = "/atualizarChubb")
     public @ResponseBody
     ResponseEntity<Chubb> atualizaChubb(@RequestBody Chubb chubb) {
         return this.chubbService.atulizarCubb(chubb);
@@ -53,7 +53,7 @@ public class ChubbController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @DeleteMapping(value = "/deletarChubb/{id}")
+    @DeleteMapping(path = "/deletarChubb/{id}")
     public @ResponseBody
     ResponseEntity<Void> deletarPorIdChubb(@RequestParam Long id) {
         return this.chubbService.deletarPorIdChubb(id);
@@ -66,7 +66,7 @@ public class ChubbController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @DeleteMapping(value = "/deletarCadastroChubb")
+    @DeleteMapping(path = "/deletarCadastroChubb")
     public @ResponseBody
     ResponseEntity<Chubb> deletarCadastroChubb(@RequestBody Chubb chubb) {
         return this.chubbService.deletarChubb(chubb);
@@ -79,7 +79,7 @@ public class ChubbController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @GetMapping(value = "/buscarCadastroChubb")
+    @GetMapping(path = "/buscarCadastroChubb")
     public List<Chubb> buscarChubbs() {
         return this.chubbService.getAllChubb();
     }
@@ -91,7 +91,7 @@ public class ChubbController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @GetMapping(value = "/buscarChubbPorId/{id}")
+    @GetMapping(path = "/buscarChubbPorId/{id}")
     public Optional<Chubb> buscarChubbId(Long id) {
         return this.chubbService.buscarChubbPorId(id);
     }

@@ -26,7 +26,7 @@ public class CaixaController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @PostMapping(value = "/salvarCaixaCadastro")
+    @PostMapping(path = "/salvarCaixaCadastro")
     public @ResponseBody
     ResponseEntity<Caixa> salvarCaixa(@RequestBody Caixa caixa) {
         return this.caixaService.salvarCaixa(caixa);
@@ -40,7 +40,7 @@ public class CaixaController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @PutMapping(value = "/atualizarCaixa")
+    @PutMapping(path = "/atualizarCaixa")
     public @ResponseBody
     ResponseEntity<Caixa> atualizaCaixa(@RequestBody Caixa caixa) {
         return this.caixaService.atulizarCaixa(caixa);
@@ -53,7 +53,7 @@ public class CaixaController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @DeleteMapping(value = "/deletarCaixa/{id}")
+    @DeleteMapping(path = "/deletarCaixa/{id}")
     public @ResponseBody
     ResponseEntity<Void> deletarPorIdCaixa(@RequestParam Long id) {
         return this.caixaService.deletarPorIdCaixa(id);
@@ -66,7 +66,7 @@ public class CaixaController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @DeleteMapping(value = "/deletarCadastroCaixa")
+    @DeleteMapping(path = "/deletarCadastroCaixa")
     public @ResponseBody
     ResponseEntity<Caixa> deletarCadastroCaixa(@RequestBody Caixa caixa) {
         return this.caixaService.deletarCaixa(caixa);
@@ -79,7 +79,7 @@ public class CaixaController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @GetMapping(value = "/buscarCadastroCaixa")
+    @GetMapping(path = "/buscarCadastroCaixa")
     public List<Caixa> buscarCaixas() {
         return this.caixaService.getAllCaixa();
     }
@@ -91,7 +91,7 @@ public class CaixaController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @GetMapping(value = "/buscarCaixasPorId/{id}")
+    @GetMapping(path = "/buscarCaixasPorId/{id}")
     public Optional<Caixa> buscarChubbPorId(Long id) {
         return this.caixaService.buscarCaixaPorId(id);
     }
