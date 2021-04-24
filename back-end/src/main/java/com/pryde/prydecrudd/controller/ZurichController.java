@@ -97,7 +97,7 @@ public class ZurichController {
             @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
-    @GetMapping(value = "/buscarPorId/{id}")
+    @GetMapping(value = "/buscarZurichPorId/{id}")
     public Optional<Zurich> buscarZurichId(Long id) {
         return this.zurichService.buscar(id);
     }

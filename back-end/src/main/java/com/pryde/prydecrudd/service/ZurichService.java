@@ -12,7 +12,6 @@ import com.pryde.prydecrudd.serviceimpl.ZurichServiceImplements;
 import java.util.List;
 import java.util.Optional;
 
-
 @Service
 public class ZurichService implements ZurichServiceImplements {
 
