@@ -57,7 +57,7 @@ public class ZurichController {
     })
     @DeleteMapping(path = "/deletarZurich/{id}")
     public @ResponseBody
-    ResponseEntity<Void> deletarZurichId(@RequestParam Long id) {
+    ResponseEntity<Void> deletarZurichId(@RequestParam("id") Long id) {
         return this.zurichService.deletarPorIdZurch(id);
     }
 
@@ -94,7 +94,7 @@ public class ZurichController {
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
     @GetMapping(path = "/buscarZurichPorId/{id}")
-    public Optional<Zurich> buscarZurichId(Long id) {
+    public Optional<Zurich> buscarZurichId(@RequestParam("id") Long id) {
         return this.zurichService.buscar(id);
     }
 }

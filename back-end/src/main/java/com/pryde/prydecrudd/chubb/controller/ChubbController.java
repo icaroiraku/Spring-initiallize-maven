@@ -55,7 +55,7 @@ public class ChubbController {
     })
     @DeleteMapping(path = "/deletarChubb/{id}")
     public @ResponseBody
-    ResponseEntity<Void> deletarPorIdChubb(@RequestParam Long id) {
+    ResponseEntity<Void> deletarPorIdChubb(@RequestParam("id") Long id) {
         return this.chubbService.deletarPorIdChubb(id);
     }
 
@@ -92,7 +92,7 @@ public class ChubbController {
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
     @GetMapping(path = "/buscarChubbPorId/{id}")
-    public Optional<Chubb> buscarChubbId(Long id) {
+    public Optional<Chubb> buscarChubbId(@RequestParam("id") Long id) {
         return this.chubbService.buscarChubbPorId(id);
     }
 

@@ -17,7 +17,7 @@ public class LoginService implements LoginServiceImplements {
     @Override
     public ResponseEntity<Login> getByUsuarioESenha(String usuario, String senha) {
         try {
-            this.loginRepository.getUsernameAndPassword(usuario, senha);
+            this.loginRepository.getByUsernameAndPassword(usuario, senha);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

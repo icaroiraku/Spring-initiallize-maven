@@ -55,7 +55,7 @@ public class CaixaController {
     })
     @DeleteMapping(path = "/deletarCaixa/{id}")
     public @ResponseBody
-    ResponseEntity<Void> deletarPorIdCaixa(@RequestParam Long id) {
+    ResponseEntity<Void> deletarPorIdCaixa(@RequestParam("id") Long id) {
         return this.caixaService.deletarPorIdCaixa(id);
     }
 
@@ -92,7 +92,7 @@ public class CaixaController {
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
     @GetMapping(path = "/buscarCaixasPorId/{id}")
-    public Optional<Caixa> buscarChubbPorId(Long id) {
+    public Optional<Caixa> buscarChubbPorId(@RequestParam("id") Long id) {
         return this.caixaService.buscarCaixaPorId(id);
     }
 

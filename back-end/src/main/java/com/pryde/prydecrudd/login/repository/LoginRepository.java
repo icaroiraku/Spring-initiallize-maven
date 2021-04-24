@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LoginRepository extends JpaRepository<Login,Long> {
 
-    Login getUsernameAndPassword(String usuario, String senha);
+    Login getByUsernameAndPassword(String usuario, String senha);
 }

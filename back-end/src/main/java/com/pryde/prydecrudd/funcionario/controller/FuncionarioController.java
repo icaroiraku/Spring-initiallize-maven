@@ -55,7 +55,7 @@ public class FuncionarioController {
     })
     @DeleteMapping(path = "/deletarFuncionario/{id}")
     public @ResponseBody
-    ResponseEntity<Void> deletarPorIdFuncionarioId(@RequestParam Long id) {
+    ResponseEntity<Void> deletarPorIdFuncionarioId(@RequestParam("id") Long id) {
         return this.funcionarioService.deletarPorIdFuncionario(id);
     }
 
@@ -92,7 +92,7 @@ public class FuncionarioController {
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
     @GetMapping(path = "/buscarFuncionarioPorId/{id}")
-    public Optional<Funcionario> buscarFuncionarioId(Long id) {
+    public Optional<Funcionario> buscarFuncionarioId(@RequestParam("id") Long id) {
         return this.funcionarioService.buscarFuncionarioPorId(id);
     }
 
