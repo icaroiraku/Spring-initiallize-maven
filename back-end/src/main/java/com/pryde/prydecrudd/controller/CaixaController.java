@@ -9,7 +9,7 @@ import com.pryde.prydecrudd.entity.Caixa;
 import com.pryde.prydecrudd.serviceimpl.CaixaServiceImplements;
 
 @CrossOrigin(origins = "*")
-@RestController(value = "/api")
+@RestController(value = "/api/caixa")
 public class CaixaController {
 	
 	@Autowired

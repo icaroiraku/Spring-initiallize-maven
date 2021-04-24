@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin(origins = "*")
-@RestController
+@RestController(value = "/api/chubb")
 public class ChubbController {
 
     @Autowired

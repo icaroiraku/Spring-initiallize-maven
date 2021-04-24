@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin(origins = "*")
-@RestController
+@RestController(value = "/api/zurich")
 @Api(value = "Api Controller Zurich")
 public class ZurichController {
 

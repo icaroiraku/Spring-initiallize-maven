@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin(origins = "*")
-@RestController
+@RestController(value = "/api/funcionario")
 public class FuncionarioController {
 
     @Autowired
