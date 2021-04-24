@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin(origins = "*")
-@RestController(value = "/api/zurich")
+@RestController
+@RequestMapping(path = "/api/zurich")
 @Api(value = "Api Controller Zurich")
 public class ZurichController {
 

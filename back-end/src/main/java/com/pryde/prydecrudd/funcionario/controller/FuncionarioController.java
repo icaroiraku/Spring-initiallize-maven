@@ -13,7 +13,8 @@ import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin(origins = "*")
-@RestController(value = "/api/funcionario")
+@RestController
+@RequestMapping(path = "/api/funcionario")
 public class FuncionarioController {
 
     @Autowired

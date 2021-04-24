@@ -13,7 +13,8 @@ import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin(origins = "*")
-@RestController(value = "/api/caixa")
+@RestController
+@RequestMapping(path = "/api/caixa")
 public class CaixaController {
 
     @Autowired
