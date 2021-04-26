@@ -61,6 +61,7 @@ public class Zurich implements Serializable {
     private String cep;
 
     @Column(name = "tb_forma_pagamento")
+
     private String formaPagamento;
 
     @Column(name = "tb_data_venc")
