@@ -1,0 +1,200 @@
+<form [formGroup]="formSeguradora">
+    <div class="nome">
+      
+        <label for = "nome">Nome : </label>
+        <input type="text" class="col-md-6" name= "name" id="nome">
+    </div>
+
+    <div class ="feminino">
+       <label> Sexo:</label>
+        <div class ="form-group">
+        <input class="form-check-input" type="radio" name="genero" id="masculino" value="1">
+         <label class="form-check-label" for="masculino">Masculino</label>
+       </div>
+    </div>
+
+    <div class ="masculino">
+        <input class="form-check-input" type="radio" name="genero" id="feminino" value="1">
+        <label class="form-check-label" for="feminino">Feminino</label>
+        </div>
+
+        
+        <div class="cpfCnpj">
+            <label for = "cpfCnpj">CPF/CNPJ:</label>
+            <input type="text" class="col-md-6" name= "cpfCnpj" id="cpfCnpj">
+            
+        </div>
+
+        <div class="dataNascimento"></div>
+        <label for="dataNascimento"> Data de Nascimento :</label>
+        <input type="date" class="col-md-6" name="dataNascimento" id="dataNascimento">
+
+
+        <div class="form-group">
+            <label for="telefone"> Telefone : </label>
+            <input type="number" class="form-control phone-ddd-mask" name="telefone" id="telefone" >
+       </div>
+
+
+       <div class="form-group">
+        <label for="celular"> Celular : </label>
+        <input type="number" class="form-control phone-ddd-mask" name="celular" id="celular" >
+   </div>
+
+       <div class="form-group">
+        <label for = "email">Email :</label>
+        <input type="email" class="form-control" name= "email" id="email">
+    </div>
+    
+    <div class="form-group">
+        <label for = "endereco">Endereço: </label>
+        <input type="text" class="form-control" name= "endereco" id="endereco">
+    </div>
+
+    
+    <div class="form-group">
+        <label for = "complemento">Complemento :</label>
+        <input type="text" class="form-control" name= "complemento" id="complemento">
+    </div>
+
+    <div class="form-group">
+        <label for = "banco">Banco :</label>
+        <input type="text" class="form-control" name= "banco" id="banco">
+    </div>
+
+    <div class="form-group">
+        <label for = "agencia">Agencia :</label>
+        <input type="text" class="form-control" name= "banco" id="banco">
+    </div>
+   
+    <div class="form-group">
+        <label for = "conta">Conta :</label>
+        <input type="text" class="form-control" name= "conta" id="conta">
+    </div>
+
+    <div class="form-group">
+        <label for = "cidade">Cidade :</label>
+        <input type="text" class="form-control" name= "cidade" id="cidade">
+    </div>
+
+    <div class="form-group">
+        <label for = "numero">Numero :</label>
+        <input type="number" class="form-control" name= "numero" id="numero">
+    </div>
+
+    <div class="form-group">
+        <label for = "uf">UF:</label>
+        <input type="text" class="form-control" name= "uf" id="uf">
+    </div>
+
+    <div class="form-group">
+        <label for="cep"> CEP :</label>
+        <input type="number" class="form-control cep-mask" name="cep" id="cep" >
+   </div>
+
+   <div class="form-group">
+    <label for = "numeroProposta">Numero De Proposta :</label>
+    <input type="number" class="form-control" name= "numeroProposta" id="numeroProposta">
+   </div>
+   <div class="form-group">
+     <label for = "numeroBeneficio">Numero Beneficio INSS</label>
+      <input type="number" class="form-control" name= "numeroBeneficio" id="numeroBeneficio">
+   </div>
+   <div class="form-group">
+    <label for = "valorPremio">Valor Premio</label>
+     <input type="number" class="form-control" name= "valorPremio" id="valorPremio">
+  </div>
+    
+    <div class="form-group">
+     <label for = "numeroContaCorrenteCredito">Numero Conta Corrente/Cartão Credito</label>
+     <input type="number" class="form-control" name= "numeroContaCorrenteCredito" id="numeroContaCorrenteCredito">
+  </div>
+
+  <div class="form-group">
+    <label for="dataEntrada"> Data da Entrada: </label>
+    <input type="date" class=" form-control" name="dataEntrada" id="dataEntrada">
+  </div>
+ 
+  <div class="form-group">
+    <label for="canalVenda"> Canal de Venda: </label>
+    <input type="text" class=" form-control" name="canalVenda" id="canalVenda">
+  </div>
+ 
+  <div class="form-group">
+    <label for="corretora"> Corretora: </label>
+    <input type="text" class=" form-control" name="corretora" id="corretora">
+  </div>
+ 
+  <div class="form-group">
+    <label for="statusAtual"> Status Atual: </label>
+    <input type="text" class=" form-control" name="statusAtual" id="statusAtual">
+  </div>
+ 
+  <div class="form-group">
+    <label for="motivoCancela"> Motivo Cancelamento :</label>
+    <input type="text" class=" form-control" name="motivoCancela" id="motivoCancela">
+  </div>
+  <div class="form-group">
+    <label for="capital"> Capital :</label>
+    <input type="text" class=" form-control" name="capital" id="capital">
+  </div>
+  <div class="form-group">
+    <label for="premio"> Premio</label>
+    <input type="text" class=" form-control" name="premio" id="premio">
+  </div>
+
+  <div class="form-group">
+    <label for="salario"> Salario: </label>
+    <input type="number" class=" form-control" name="salario" id="salario">
+  </div>
+
+  <div class="form-group">
+    <label for="plano"> Plano: </label>
+    <input type="text" class=" form-control" name="plano" id="plano">
+  </div>
+  
+  <div class="form-group">
+    <label for="formaPag"> Forma de Pagamento: </label>
+    <input type="text"class=" form-control" name="formaPag" id="formaPag">
+  </div>
+
+  <div class="form-group">
+    <label for="dataVencimento"> Dia do Vencimento: </label>
+    <input type="date" class=" form-control" name="dataVencimento" id="dataVencimento">
+  </div>
+
+  <div class="form-group">
+    <label for="vigencia"> Vigencia: </label>
+    <input type="text"class=" form-control" name="vigencia" id="vigencia">
+  </div>
+   
+  <div class="form-group">
+    <label for="dataTransacao"> Dia da Transação: </label>
+    <input type="date" class=" form-control" name="dataTransacao" id="dataTransacao">
+  </div>
+  
+  <div class="form-group">
+    <label for="seguradora"> Seguradora: </label>
+    <input type="text" class=" form-control" name="seguradora" id="seguradora">
+  </div>
+ 
+
+  <div class="form-group">
+    <label for="origem"> Origem: </label>
+    <input type="text" class=" form-control" name="origem" id="origem">
+  </div>  
+
+
+
+  <div class="btn-toolbar">
+    <button type="button" id="btnSubmit" class="btn btn-secondary mt-4 ml-2">Salvar</button>
+    <button type="button" id="btnSubmit" class="btn btn-secondary mt-4 ml-2">Buscar</button>
+    <button type="button"  routerLink ="/src/app/account/login" id="btnCancel" class="btn btn-secondary mt-4 ml-2">Cancel</button>
+  </div>
+
+
+  
+</form>
+
+
+
