@@ -1,6 +1,7 @@
 package com.pryde.prydecrudd.funcionario.entity;
 
 
+import com.pryde.prydecrudd.login.entity.Login;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -36,12 +37,9 @@ private static final long serialVersionUID = 460515535873457428L;
 	
 	@Column(name = "tb_perm_func")
 	private String permFunc;
-	
-	@Column(name = "tb_login_func")
-	private String loginFunc;
-	
-	@Column(name = "tb_senha_func")
-	private String senhaFunc;
+
+	@OneToOne(mappedBy = "funcionario")
+	private Login login;
 	
 	@Column(name = "tb_data_cad")
 	private String dataCad;
