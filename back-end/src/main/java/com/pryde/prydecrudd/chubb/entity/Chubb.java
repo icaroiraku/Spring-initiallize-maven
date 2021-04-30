@@ -10,9 +10,7 @@ import java.io.Serializable;
 @Table(name = "chubb")
 
 public class Chubb  implements Serializable  {
-	
-	
-	
+
 	private static final long serialVersionUID = 460515535873457428L;
 	
 	@Id
@@ -55,7 +53,6 @@ public class Chubb  implements Serializable  {
 	
 	@Column(name = "tb_data_trans")
 	private String dataTrans;
-	
 
 	@Column(name = "tb_num_prop")
 	private String numProp;

@@ -50,8 +50,7 @@ private static final long serialVersionUID = 460515535873457428L;
 
 	@Column(name = "tb_situ_func")
 	private String situFunc;
-	
-	
+
 	@Column(name = "tb_super_func")
 	private String superFunc;
 }

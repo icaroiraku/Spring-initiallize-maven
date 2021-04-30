@@ -15,6 +15,9 @@ public class Login implements Serializable {
     @Column(name = "num_id")
     private Long id;
 
+    @Column(name = "tb_idFunc")
+    private String idFunc;
+
     @Column(name = "tx_usuario")
     private String username;
 
